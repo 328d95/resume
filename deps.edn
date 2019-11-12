@@ -1,0 +1,9 @@
+{:deps {org.clojure/clojure {:mvn/version "1.9.0"}
+        org.clojure/clojurescript {:mvn/version "1.10.339"}
+        com.bhauman/figwheel-main {:mvn/version "0.2.3"}
+        com.bhauman/rebel-readline-cljs {:mvn/version "0.1.4"}
+        reagent {:mvn/version "0.9.0-rc2"}}
+ :aliases {:fig {:main-opts ["-m" "figwheel.main"]}}
+ :paths ["src" "resources" "target"]
+ :css-dirs ["target/public/css"]}
+; run with clj -A:fig
