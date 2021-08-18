@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Deps: reagent:0.9.0-rc2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/reagent/reagent/0.9.0-rc2/reagent-0.9.0-rc2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

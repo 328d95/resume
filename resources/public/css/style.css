@@ -1,47 +1,105 @@
+html {
+    font-size: 14px;
+    --dark-grey: #2e2e2e;
+    --my-colour: #328d95;
+}
+
 div#app {
     width: 21cm;
     margin: 0 auto;
-    font-family: 'B612 Mono', monospace;
+    font-family: Menlo, 'B612 Mono', monospace;
     height: 100%;
 }
 
 div#resume {
-    width: 18cm;
+    width: 19cm;
     margin: 0 auto;
-    line-height: 1.7;
+    line-height: 1.5;
     height: 100%;
+    font-size: 0.9rem;
+}
+
+.name-title {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.name-title .smaller {
+    font-size: 1rem;
+}
+
+.cover-letter {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
 }
 
 a {
-    color: #328d95;
+    color: var(--my-colour);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.tech {
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+    color: var(--dark-grey);
+}
+
+.organisation {
+    color: var(--dark-grey);
+}
+
+.position {
+    color: var(--dark-grey);
 }
 
 hr {
     color: lightgray;
 }
 
-.dot {
+.dot:first-of-type {
+    font-style: italic;
+}
+
+.dot:not(:first-of-type)::before {
+    content: "• "
+}
+
+.dot .dot::before {
+    content: "- "
+}
+
+.dot + .dot {
+    padding-top: 0.25rem;
+}
+
+.dot .dot {
+    font-style: normal;
+    padding: 0;
     padding-left: 1em;
 }
 
 div.section {
-    margin-top: 1.5em;
+
     display: block;
     overflow: hidden;
+}
+
+div.section + div.section {
+    margin-top: 1.5em;
 }
 
 div.right {
     width: 20%;
     float: right;
-    font-size: smaller;
 }
 
-div.right > p {
+div.right > * {
     text-align: right;
 }
 
 div.left {
-    width: 76%;
+    width: 80%;
     float: left;
 }
 
@@ -58,19 +116,29 @@ div.left > p {
 }
 
 .location {
-    margin-top: 1.3em;
+    font-size: small;
     text-align: right;
     color: #328d95;
+    font-weight: bold;
 }
 
 .dates {
     text-align: right;
+    font-weight: normal;
 }
 
 .stack {
     margin-top: 0;
-    font-weight: 600;
     line-height: 1;
+}
+
+.stack > * {
+    margin: 0;
+}
+
+.stack > * + * {
+    margin-top: 0.75em;
+
 }
 
 .header {
@@ -81,15 +149,6 @@ div.left > p {
 .header * {
     padding: 0;
     margin: 0;
-}
-
-.header h1 {
-    font-weight: 500;
-}
-
-.header h4 {
-    color: #328d95;
-    margin-top: -0.5em
 }
 
 .header span {
